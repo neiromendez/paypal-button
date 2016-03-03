@@ -12,7 +12,7 @@
   ],
   "main": "index.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/neiromendez/twitter-button",
+  "homepage": "https://github.com/neiromendez/paypal-button",
   "ignore": [
     "/.*",
     "/test/"
