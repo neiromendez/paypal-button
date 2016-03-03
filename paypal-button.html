@@ -1,0 +1,110 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+An element for integrate for any page.
+
+Example:
+
+    <paypal-button></paypal-button>
+
+
+
+   paypal-button type="single"></paypal-button
+
+
+
+  paypal-button type="complete"></paypal-button
+
+
+
+  paypal-button type="add"></paypal-button
+
+@demo demo/index.html
+@hero hero.svg
+-->
+
+<dom-module id="paypal-button">
+    <template>
+        <style>
+            :host {
+                display: block;
+                box-sizing: border-box;
+            }
+
+            .author img {
+                display: block;
+                float: left;
+                margin-right: 5px;
+                max-height: 100px;
+                max-width: 100px;
+            }
+        </style>
+
+        <template is="dom-if" if="{{types.complete}}">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="8DWXQMMV533G4">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0"
+                       name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+            <br> <br>
+        </template>
+
+        <template is="dom-if" if="{{types.single}}">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="V568CCNXJKUYL">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0"
+                       name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+            <br> <br>
+        </template>
+
+        <template is="dom-if" if="{{types.add}}">
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="229Y9FPDFXQVG">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_SM.gif" border="0"
+                       name="submit"
+                       alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+            </form>
+            <br> <br>
+        </template>
+    </template>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'paypal-button',
+
+            properties: {
+                /**
+                 * `type` indicates which buttons show,
+                 */
+                type: {
+                    type: String,
+                    value: ''
+                }
+            },
+            // Element Lifecycle
+
+            ready: function () {
+                this.types = {};
+                this.set('types.' + this.type || 'single', true);
+            }
+        });
+    </script>
+</dom-module>

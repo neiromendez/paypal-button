@@ -1,0 +1,27 @@
+{
+  "name": "paypal-button",
+  "version": "1.0.7",
+  "authors": [
+    "Neiro Mendez alne1990@hotmail.com"
+  ],
+  "description": "An element for integrate for any page.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "index.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/neiromendez/twitter-button",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0"
+  }
+}
