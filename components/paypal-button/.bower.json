@@ -1,0 +1,36 @@
+{
+  "name": "paypal-button",
+  "authors": [
+    "Neiro Mendez alne1990@hotmail.com"
+  ],
+  "description": "An element for integrate for any page.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "index.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/neiromendez/paypal-button",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "^4.0.0"
+  },
+  "_release": "c59c5a3089",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c59c5a3089898386c3891de8d6251ca7a0310914"
+  },
+  "_source": "git@github.com:neiromendez/paypal-button.git",
+  "_target": "master",
+  "_originalSource": "git@github.com:neiromendez/paypal-button",
+  "_direct": true
+}
